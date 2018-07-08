@@ -1,0 +1,146 @@
+$speed: 2.5s;
+	
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: #DD3C54;
+}
+
+.bell {
+	position: absolute;
+	top: 173px;
+	left: 175px;
+	fill: #fff;
+	transform-origin: 50% 0;
+	animation: shake $speed ease infinite;
+}
+
+.line {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 2;
+	stroke-linecap: round;
+}
+
+.line-1, .line-2, .line-3 {
+	position: absolute;
+	top: 170px;
+	left: 230px;
+}
+
+
+.line-4, .line-5, .line-6 {
+	position: absolute;
+	top: 170px;
+	right: 230px;
+}
+
+@for $i from 1 through 6 {
+	.line-#{$i} {
+		animation: line-#{$i} $speed ease-out infinite both;
+	}
+}
+
+@keyframes line-1 {
+	0% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	50%, 100% {
+		transform: translate3d(60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes line-2 {
+	0%,19%{
+		opacity: 0;
+	}
+	20% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	70%, 100% {
+		transform: translate3d(60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes line-3 {
+	0%,39% {
+		opacity: 0;
+	}
+	40% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	90%, 100% {
+		transform: translate3d(60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes line-4 {
+	0% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	50%, 100% {
+		transform: translate3d(-60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes line-5 {
+	0%,19%{
+		opacity: 0;
+	}
+	20% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	70%, 100% {
+		transform: translate3d(-60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes line-6 {
+	0%,39% {
+		opacity: 0;
+	}
+	40% {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1;
+	}
+	90%, 100% {
+		transform: translate3d(-60px,0,0) scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes shake {
+	0%, 50%, 100% {
+		transform: rotate(0);
+	}
+	5%, 10%, 15%, 20%, 25%, 30%, 35%, 40% {
+		transform: rotate(6deg);
+	} 
+	45% {
+		transform: rotate(4deg);
+	} 
+	7.5%, 12.5%, 17.5%, 22.5%, 27.5%, 32.5%, 37.5%, 42.5% {
+		transform: rotate(-6deg);
+	}
+	47.5% {
+		transform: rotate(-2deg);
+	}
+}

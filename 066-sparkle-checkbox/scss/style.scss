@@ -1,0 +1,93 @@
+$numberOfSparkles: 12; // update together with HTML
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #5A717B;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.checkbox {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 180px;
+	left: 180px;
+
+	input {
+		display: none;
+
+		&:checked {
+			& ~ .toggle {
+				border-width: 14px;
+				background: #5FD17A;
+				box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2), inset 2px 2px 4px 0 rgba(0,0,0,0);
+			}
+
+			@for $i from 1 through $numberOfSparkles {
+				$nullBase: $i - 1;
+				$degree: (360 / $numberOfSparkles) * $nullBase;
+				& ~ .sparkles .sparkle-#{$i} {
+					transform: rotate( ($degree)+deg ) translateY(-50px) scaleY(1);
+					opacity: 0;
+					transition: all .5s ease-in-out;
+				}
+			}
+
+		}
+
+	}
+
+	.toggle {
+		position: relative;
+		z-index: 5;
+		display: block;
+		box-sizing: border-box;
+		width: 40px;
+		height: 40px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		background: transparent;
+		cursor: pointer;
+		transition: all .3s ease-in-out;
+		box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2), inset 2px 2px 4px 0 rgba(0,0,0,0.2);
+	}
+
+	.sparkles {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		top: 0px;
+		left: 0px;
+
+		.sparkle {
+			position: absolute;
+			width: 2px;
+			height: 16px;
+			top: 12px;
+			left: 19px;
+			background: #fff;
+			transition: none;
+		}
+
+		@for $i from 1 through $numberOfSparkles {
+			$nullBase: $i - 1;
+			$degree: (360 / $numberOfSparkles) * $nullBase;
+			.sparkle-#{$i} {
+				transform: rotate( ($degree)+deg ) translateY(-15px) scaleY(0);
+			}
+		}		
+	}
+
+}

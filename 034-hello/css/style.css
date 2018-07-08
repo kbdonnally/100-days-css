@@ -1,0 +1,93 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #EA4C89;
+  font-size: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.line {
+  width: 225px;
+  height: 2px;
+  background: #fff;
+  margin: 15px 0;
+  -webkit-animation: line .6s ease-out both;
+          animation: line .6s ease-out both;
+}
+
+.text {
+  stroke: #EA4C89;
+  stroke-dasharray: 270;
+  stroke-dashoffset: 0;
+}
+.text .a1 {
+  fill: #fff;
+  stroke-width: 6;
+  -webkit-animation: fill 1.2s ease-in-out both;
+          animation: fill 1.2s ease-in-out both;
+}
+.text .a2 {
+  fill: none;
+  stroke-width: 12;
+  -webkit-animation: fill 1.7s ease-in-out both;
+          animation: fill 1.7s ease-in-out both;
+}
+.text .a3 {
+  fill: none;
+  stroke-width: 18;
+  -webkit-animation: fill 2.2s ease-in-out both;
+          animation: fill 2.2s ease-in-out both;
+}
+
+@-webkit-keyframes fill {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 270;
+  }
+}
+
+@keyframes fill {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 270;
+  }
+}
+@-webkit-keyframes line {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes line {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}

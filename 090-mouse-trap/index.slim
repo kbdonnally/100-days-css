@@ -1,0 +1,9 @@
+.frame
+	.space
+	-for i in (1..380)
+		div class="trigger trigger-#{i}" onclick="void(0);"
+	.lines
+		-for j in (1..19)
+			div class="line line-#{j}"
+				.left
+				.right

@@ -1,0 +1,148 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #FFDCB5;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.pig .head {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: #F7949A;
+  border-radius: 50%;
+}
+.pig .ear {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+  width: 60px;
+  height: 60px;
+  top: -5px;
+  background: #FFB7BC;
+  border: 7px solid #F7949A;
+}
+.pig .ear-l {
+  border-radius: 15px 0 0 0;
+  left: 10px;
+  -webkit-transform: rotate(-12deg) skewY(27deg);
+          transform: rotate(-12deg) skewY(27deg);
+}
+.pig .ear-r {
+  border-radius: 0 15px 0 0;
+  right: 10px;
+  -webkit-transform: rotate(12deg) skewY(-27deg);
+          transform: rotate(12deg) skewY(-27deg);
+}
+.pig .eye {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 42%;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-animation: eyes 15s ease-in-out infinite;
+          animation: eyes 15s ease-in-out infinite;
+}
+.pig .eye:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+  top: 9px;
+  left: 9px;
+  -webkit-animation: pupills 15s ease-in-out infinite;
+          animation: pupills 15s ease-in-out infinite;
+}
+.pig .eye-l {
+  left: 24%;
+}
+.pig .eye-r {
+  right: 24%;
+}
+.pig .nose {
+  position: absolute;
+  height: 50px;
+  width: 60px;
+  top: 55%;
+  left: 50px;
+  background: #FFB7BC;
+  border-radius: 100px / 80px;
+}
+.pig .nostril {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 15px;
+  background: #CE666D;
+  border-radius: 50%;
+}
+.pig .nostril-l {
+  left: 14px;
+}
+.pig .nostril-r {
+  right: 14px;
+}
+
+@-webkit-keyframes eyes {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes eyes {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+@-webkit-keyframes pupills {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+  }
+}
+@keyframes pupills {
+  0%, 23%, 25%, 65%, 67%, 89%, 91%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  24%, 66%, 90% {
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+  }
+}

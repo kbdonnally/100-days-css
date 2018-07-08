@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #34495E;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hiddenKey {
+  width: 220px;
+  height: 50px;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.3);
+  -webkit-perspective: 250px;
+          perspective: 250px;
+}
+.hiddenKey .inputWrapper {
+  position: absolute;
+  z-index: 2;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.hiddenKey .inputWrapper.valid {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.hiddenKey .inputWrapper.valid ~ .keyWrapper {
+  box-shadow: 2px -50px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.hiddenKey .inputWrapper .input {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: #fff;
+  width: 220px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #34495E;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 2;
+}
+.hiddenKey .inputWrapper .backSide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: 700;
+  color: #34495E;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+.hiddenKey .keyWrapper {
+  width: 220px;
+  height: 50px;
+  background: #64C760;
+  color: #fff;
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  box-shadow: 2px 0px 8px 0 transparent;
+}

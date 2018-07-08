@@ -1,0 +1,250 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #42A7A1;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  height: 220px;
+  width: 280px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.card .header {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background: #F1BA64;
+  color: #fff;
+}
+.card .header .big {
+  position: absolute;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.card .header .small {
+  position: absolute;
+  font-weight: 400;
+  font-size: 11px;
+}
+.card .header .title {
+  top: 12px;
+  left: 15px;
+}
+.card .header .date {
+  top: 30px;
+  left: 15px;
+}
+.card .header .type {
+  top: 14px;
+  right: 15px;
+}
+.card .header .value {
+  top: 28px;
+  right: 15px;
+}
+.card .parameter {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+.card .parameter span {
+  position: relative;
+  font-size: 9px;
+  color: #606060;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+.card .parameter span:before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+  content: '';
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+.card .parameter .red:before {
+  background: #FA7373;
+}
+.card .parameter .blue:before {
+  background: #7BA2FF;
+}
+.card .statistic {
+  position: relative;
+  height: 81px;
+  width: 260px;
+  margin: 0 auto;
+}
+.card .statistic .line-1, .card .statistic .line-2, .card .statistic .line-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #F2F2F2;
+}
+.card .statistic .line-2 {
+  top: 40px;
+}
+.card .statistic .line-3 {
+  top: inherit;
+  bottom: 0;
+}
+.card .statistic .data svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.card .statistic .data polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.card .statistic .data.red polyline {
+  stroke: #FA7373;
+}
+.card .statistic .data.blue polyline {
+  stroke: #7BA2FF;
+}
+.card .statistic .data .tooltip {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 10px, 0);
+          transform: translate3d(-50%, 10px, 0);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  color: #fff;
+  padding: 8px 6px;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+  transition: opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s, -webkit-transform 0.4s ease-out 0s;
+}
+.card .statistic .data .tooltip:after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.card .statistic .data [class^="point-"] {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+.card .statistic .data [class^="point-"]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+.card .statistic .data.red [class^="point-"], .card .statistic .data.red .tooltip, .card .statistic .data.red .tooltip:after {
+  background: #FA7373;
+}
+.card .statistic .data.red .point-1 {
+  left: 7px;
+  top: 43px;
+}
+.card .statistic .data.red .point-2 {
+  left: 48px;
+  top: 9px;
+}
+.card .statistic .data.red .point-3 {
+  left: 88px;
+  top: 20px;
+}
+.card .statistic .data.red .point-4 {
+  left: 128px;
+  top: 8px;
+}
+.card .statistic .data.red .point-5 {
+  left: 169px;
+  top: 35px;
+}
+.card .statistic .data.red .point-6 {
+  left: 209px;
+  top: 45px;
+}
+.card .statistic .data.red .point-7 {
+  left: 249px;
+  top: 16px;
+}
+.card .statistic .data.blue [class^="point-"], .card .statistic .data.blue .tooltip, .card .statistic .data.blue .tooltip:after {
+  background: #7BA2FF;
+}
+.card .statistic .data.blue .point-1 {
+  left: 7px;
+  top: 58px;
+}
+.card .statistic .data.blue .point-2 {
+  left: 48px;
+  top: 47px;
+}
+.card .statistic .data.blue .point-3 {
+  left: 88px;
+  top: 62px;
+}
+.card .statistic .data.blue .point-4 {
+  left: 128px;
+  top: 52px;
+}
+.card .statistic .data.blue .point-5 {
+  left: 169px;
+  top: 58px;
+}
+.card .statistic .data.blue .point-6 {
+  left: 209px;
+  top: 71px;
+}
+.card .statistic .data.blue .point-7 {
+  left: 249px;
+  top: 61px;
+}
+.card .days {
+  width: 280px;
+  margin: 0 auto;
+}
+.card .days .day {
+  display: block;
+  float: left;
+  width: 14.28571%;
+  font-size: 9px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}

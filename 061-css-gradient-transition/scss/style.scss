@@ -1,0 +1,61 @@
+$colorA: #77C8C0;
+$colorAA: #267AAC;
+$colorB: #4AD7B8;
+$colorBB: #f39c12;
+
+@mixin gradient($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(-45deg,  $color1 0%, $color2 100%); 
+	background: -webkit-linear-gradient(-45deg,  $color1 0%,$color2 100%);
+	background: linear-gradient(135deg,  $color1 0%,$color2 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=1 ); 
+}
+
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #333;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+div[class^="gradient"] {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	left: 0;
+}
+
+.gradient-1 {
+	@include gradient($colorA, $colorAA);
+}
+
+.gradient-2 {
+	z-index: 2;
+	opacity: 0;
+	@include gradient($colorB, $colorBB);
+	animation: gradient 4s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0%, 100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+

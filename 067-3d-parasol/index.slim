@@ -1,0 +1,11 @@
+.frame
+	.parasol
+		.pole
+		.shadowPole
+		.top
+			-for j in (1..12)
+				div class="triangle triangle-#{j}"
+		.shadowTop
+			.shadow
+				-for i in (1..12)
+					div class="triangle triangle-#{i}"

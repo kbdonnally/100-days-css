@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+$speed: 10s; // 240s for realtime
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: #4C4C4C;
+  color: #fff;
+	font-size: 12px;
+	line-height: 100%;
+	text-transform: uppercase;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+	width: 212px;
+	height: 212px;
+  top: 87px;
+  left: 87px;
+	background: #242424;
+	border: 7px solid #3A3A3A;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.date {
+	position: absolute;
+	top: 68px;
+	width: 100%;
+}
+
+.time {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 100%;
+	margin: 4px 0;
+}
+
+.beat {
+	position: absolute;
+	top: 129px;
+	left: 57px;
+	
+	span {
+		color: #F85B5B;
+		font-size: 10px;
+		float: left;
+		margin-top: 1px;
+		margin-right: 4px;
+		animation: beat .9s ease-in-out infinite;
+	}
+} 
+
+.energy {
+	position: absolute;
+	top: 129px;
+	right: 55px;
+}
+
+@for $i from 1 through 15 {
+	
+	.point-set-#{$i} {
+		position: absolute;
+		height: 188px;
+		width: 188px;
+		top: 12px;
+		left: 12px;
+		transform: rotate( (($i - 1)*6) + deg );
+			
+		.point-1 {
+			position: absolute;
+			width: 2px;
+			height: 2px;
+			top: 0;
+			left: 93px;
+			background: #D3D3D3;
+			border-radius: 50%;
+		}
+		
+		.point-2 {
+			@extend .point-1;
+			top: 93px;
+			left: auto;
+			right: 0;
+		}
+		
+		.point-3 {
+			@extend .point-1;
+			top: auto;
+			bottom: 0;
+		}
+		
+		.point-4 {
+			@extend .point-1;
+			top: 93px;
+			left: 0;
+		}
+			
+	}
+	
+}
+
+.ring {
+	position: absolute;
+	width: 202px;
+	height: 202px;
+	border-radius: 50%;
+	top: 5px;
+	left: 5px;
+	
+	.mask-1 {
+		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		clip: rect(0,202px,202px,101px);
+		animation: mask-1 $speed steps(1) infinite;
+		
+		.spin {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 50%;
+			bottom: 0;
+			border: 3px solid #F85B5B;
+			border-radius: 100% 0 0 100% / 50% 0 0 50%;
+			border-right: none;
+			transform-origin: 100% 50%;
+			animation: rotate-1 $speed linear infinite;
+		}
+	}
+	
+	.mask-2 {
+		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		clip: rect(0,101px,202px,0);
+		animation: mask-2 $speed steps(1) infinite;
+		
+		.spin {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 50%;
+			bottom: 0;
+			border: 3px solid #F85B5B;
+			border-radius: 100% 0 0 100% / 50% 0 0 50%;
+			border-right: none;
+			transform-origin: 100% 50%;
+			animation: rotate-2 $speed linear infinite;
+		}
+	}
+	
+}
+
+@keyframes rotate-1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	12.5% {
+		transform: rotate(180deg);
+	}
+	25% {
+		transform: rotate(360deg);
+	}
+	37.5% {
+		transform: rotate(360deg);
+	}
+	50% {
+		transform: rotate(540deg);
+	}
+	62.5% {
+		transform: rotate(540deg);
+	}
+	75% {
+		transform: rotate(540deg);
+	}
+	87.5% {
+		transform: rotate(720deg);
+	}
+	100% {
+		transform: rotate(720deg);
+	}
+}
+
+@keyframes mask-1 {
+	0% {
+		clip: rect(0,202px,202px,101px);
+	}
+	12.5%, 25%, 37.5%, 50% {
+		clip: rect(0,101px,202px,0);
+	}
+	62.5%, 75%, 82.5%, 100% {
+		clip: rect(0,202px,202px,101px);
+	}
+}
+
+@keyframes rotate-2 {
+	0% {
+		transform: rotate(180deg);
+	}
+	12.5% {
+		transform: rotate(180deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	37.5% {
+		transform: rotate(360deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	62.5% {
+		transform: rotate(540deg);
+	}
+	75% {
+		transform: rotate(720deg);
+	}
+	87.5% {
+		transform: rotate(720deg);
+	}
+	100% {
+		transform: rotate(900deg);
+	}
+}
+
+@keyframes mask-2 {
+	0% {
+		clip: rect(0,101px,202px,0);
+	}
+	12.5%, 25%, 37.5%, 50%{
+		clip: rect(0,202px,202px,101px);
+	}
+	 62.5%, 75%, 82.5%, 100% {
+		clip: rect(0,101px,202px,0);
+	}
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1);
+	}
+	35% {
+		transform: scale(1.2);
+	}
+}

@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+$numberOfElements: 4; 
+$fontSize: 30px;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.13);
+	overflow: hidden;
+  background: #f39c12;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 49.5%;
+  left: 0;
+	right: 0;
+	margin-top: ($fontSize * 1.5) / -2;
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: $fontSize;
+	line-height: $fontSize * 1.5;
+	height: $fontSize * 1.5;
+	
+	.pre {
+		position: absolute;
+		top: 0;
+		right: 56%;
+		height: $fontSize * 1.5;
+		text-shadow: 2px 2px 2px #e67e22;
+	}
+	
+	.change_outer {
+		position: absolute;
+		top: 0;
+		left: 46%;
+		text-align: left;
+		height: $fontSize * 1.5;
+		overflow: hidden;
+		
+		.change_inner {
+			position: relative;
+			animation: rotate 8s ease-in-out infinite;
+		}
+		
+		.element {
+			display: block;
+			font-weight: 700;
+			text-shadow: 2px 2px 2px #e67e22;
+		}
+		
+	}
+	
+}
+
+@keyframes rotate {
+	0%, 20% {
+		transform: translateY(0);
+	}
+	25%,45% {
+		transform: translateY($fontSize * -1.5);
+	}
+	50%,70% {
+		transform: translateY($fontSize * -3);
+	}
+	75%,95% {
+		transform: translateY($fontSize * -4.5);
+	}
+	100% {
+		transform: translateY($fontSize * -6);
+	}
+}

@@ -1,0 +1,78 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+}
+
+.stripes {
+	position: relative;
+	top: -67px;
+	left: -100px;
+	width: 600px;
+	transform: rotate(45deg);
+	
+	.stripe {
+		background: #353535;
+		width: 600px;
+		height: 3px;
+		margin-bottom: 16px;
+	}
+	
+}
+
+.center {
+	position: absolute;
+	width: 260px;
+	height: 260px;
+	top: 70px;
+	left: 70px;
+	background: #353535;
+	border-radius: 3px;
+	box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.3);
+}
+
+.polygon {
+	position: absolute;
+	width: 160px;
+	height: 140px;
+	top: 60px;
+	left: 50px;
+	
+	.light {
+		fill: #eee;
+		transition: all .5s ease-in-out;
+	}
+	.middle {
+		fill: #ccc;
+		transition: all .5s ease-in-out;
+	}
+	.dark {
+		fill: #aaa;
+		transition: all .5s ease-in-out;
+	}
+	
+	&:hover {
+		
+		.light {
+			fill: #aaa;
+		}
+		.middle {
+			fill: #eee;
+		}
+		.dark {
+			fill: #ccc;
+		}
+		
+	}
+
+}

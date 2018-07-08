@@ -1,0 +1,375 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #4B4841;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  top: 110px;
+  left: 40px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+.card:hover .flip {
+  -webkit-transform: rotateX(180deg) translate3d(0, 0, 0);
+          transform: rotateX(180deg) translate3d(0, 0, 0);
+  box-shadow: 8px -10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+.card .flip {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+.card .front, .card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFCE4E;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  text-align: center;
+}
+.card .front {
+  z-index: 2;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+.card .front img {
+  position: relative;
+  top: 52px;
+  -webkit-animation: bike .6s ease-in-out infinite;
+          animation: bike .6s ease-in-out infinite;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+.card .front .street {
+  position: absolute;
+  top: 127px;
+  left: 80px;
+  width: 160px;
+  height: 3px;
+  overflow: hidden;
+}
+.card .front .street .stripe-1 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 4px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 1s linear 0.3s infinite;
+          animation: street 1s linear 0.3s infinite;
+}
+.card .front .street .stripe-2 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 6px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 1s linear 1s infinite;
+          animation: street 1s linear 1s infinite;
+}
+.card .front .street .stripe-3 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 8px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 1s linear 0.4s infinite;
+          animation: street 1s linear 0.4s infinite;
+}
+.card .front .street .stripe-4 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 10px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 0.9s linear 0.2s infinite;
+          animation: street 0.9s linear 0.2s infinite;
+}
+.card .front .street .stripe-5 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 12px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 0.9s linear 0.5s infinite;
+          animation: street 0.9s linear 0.5s infinite;
+}
+.card .front .street .stripe-6 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 14px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 0.9s linear 0.6s infinite;
+          animation: street 0.9s linear 0.6s infinite;
+}
+.card .front .street .stripe-7 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 16px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 1s linear 0.5s infinite;
+          animation: street 1s linear 0.5s infinite;
+}
+.card .front .street .stripe-8 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 18px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 1s linear 0.6s infinite;
+          animation: street 1s linear 0.6s infinite;
+}
+.card .front .street .stripe-9 {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  height: 3px;
+  width: 20px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: street 0.9s linear 0.1s infinite;
+          animation: street 0.9s linear 0.1s infinite;
+}
+.card .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.card .back img {
+  position: relative;
+  z-index: 1;
+  top: 57px;
+  -webkit-animation: helicopter 1.5s ease-in-out infinite;
+          animation: helicopter 1.5s ease-in-out infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.card .back .sky {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  bottom: 0;
+  width: 160px;
+  overflow: hidden;
+}
+.card .back .sky .cloud-1 {
+  position: absolute;
+  right: -25px;
+  top: 34px;
+  height: 3px;
+  width: 12.4px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.9s infinite;
+          animation: cloud 0.8s linear 0.9s infinite;
+}
+.card .back .sky .cloud-2 {
+  position: absolute;
+  right: -25px;
+  top: 48px;
+  height: 3px;
+  width: 16.2px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.9s infinite;
+          animation: cloud 0.7s linear 0.9s infinite;
+}
+.card .back .sky .cloud-3 {
+  position: absolute;
+  right: -25px;
+  top: 62px;
+  height: 3px;
+  width: 20.9px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 1s infinite;
+          animation: cloud 0.7s linear 1s infinite;
+}
+.card .back .sky .cloud-4 {
+  position: absolute;
+  right: -25px;
+  top: 76px;
+  height: 3px;
+  width: 19.9px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.9s infinite;
+          animation: cloud 0.7s linear 0.9s infinite;
+}
+.card .back .sky .cloud-5 {
+  position: absolute;
+  right: -25px;
+  top: 90px;
+  height: 3px;
+  width: 13.6px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.4s infinite;
+          animation: cloud 0.7s linear 0.4s infinite;
+}
+.card .back .sky .cloud-6 {
+  position: absolute;
+  right: -25px;
+  top: 104px;
+  height: 3px;
+  width: 22.7px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.9s infinite;
+          animation: cloud 0.7s linear 0.9s infinite;
+}
+.card .back .sky .cloud-7 {
+  position: absolute;
+  right: -25px;
+  top: 118px;
+  height: 3px;
+  width: 11.1px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.7s linear 0.3s infinite;
+          animation: cloud 0.7s linear 0.3s infinite;
+}
+.card .back .sky .cloud-8 {
+  position: absolute;
+  right: -25px;
+  top: 132px;
+  height: 3px;
+  width: 11.1px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.8s infinite;
+          animation: cloud 0.8s linear 0.8s infinite;
+}
+.card .back .sky .cloud-9 {
+  position: absolute;
+  right: -25px;
+  top: 146px;
+  height: 3px;
+  width: 13.6px;
+  background: #4B4841;
+  border-radius: 3px;
+  -webkit-animation: cloud 0.8s linear 0.4s infinite;
+          animation: cloud 0.8s linear 0.4s infinite;
+}
+
+@-webkit-keyframes bike {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(1.03);
+            transform: scaleY(1.03);
+  }
+}
+
+@keyframes bike {
+  0%, 100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(1.03);
+            transform: scaleY(1.03);
+  }
+}
+@-webkit-keyframes street {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
+}
+@keyframes street {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
+}
+@-webkit-keyframes helicopter {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+@keyframes helicopter {
+  0%, 100% {
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+}
+@-webkit-keyframes cloud {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
+}
+@keyframes cloud {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+            transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  100% {
+    -webkit-transform: translate3d(-210px, 0, 0) scaleX(0.8);
+            transform: translate3d(-210px, 0, 0) scaleX(0.8);
+  }
+}

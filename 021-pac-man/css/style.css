@@ -1,0 +1,120 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #2C2E2E;
+  overflow: hidden;
+}
+
+.pacman {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  fill: none;
+  stroke: #F4D146;
+  stroke-width: 50px;
+  stroke-linecap: butt;
+  stroke-dasharray: 157;
+  -webkit-animation: mouth 0.7s ease-in-out infinite;
+          animation: mouth 0.7s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 167px;
+  left: 204px;
+  fill: #2C2E2E;
+  -webkit-animation: eye 0.7s ease-in-out infinite;
+          animation: eye 0.7s ease-in-out infinite;
+}
+
+.dots {
+  position: absolute;
+  height: 14px;
+  width: 240px;
+  top: 193px;
+  left: 180px;
+  stroke: #F4D146;
+  stroke-width: 14px;
+  stroke-dasharray: 0px 50px;
+  stroke-linecap: round;
+  -webkit-animation: points 0.7s linear infinite;
+          animation: points 0.7s linear infinite;
+  stroke-dashoffset: 14;
+}
+
+@-webkit-keyframes mouth {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes mouth {
+  0%, 100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+            transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes eye {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-6px, -3px, 0);
+            transform: translate3d(-6px, -3px, 0);
+  }
+}
+@keyframes eye {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-6px, -3px, 0);
+            transform: translate3d(-6px, -3px, 0);
+  }
+}
+@-webkit-keyframes points {
+  0% {
+    stroke-dashoffset: 14;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 64;
+  }
+}
+@keyframes points {
+  0% {
+    stroke-dashoffset: 14;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 64;
+  }
+}

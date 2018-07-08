@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #28404E;
+	background: -moz-linear-gradient(top, #28404E 0%, #1c2e38 100%); 
+	background: -webkit-linear-gradient(top, #28404E 0%, #1c2e38 100%);
+	background: linear-gradient(to bottom, #28404E 0%, #1c2e38 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28404e', endColorstr='#1c2e38',GradientType=0 ); 
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.headline {
+	font-weight: 600;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 22px;
+	
+	.small {
+		font-weight: 300;
+		font-size: 16px;
+	}
+	
+}
+.circle-big {
+	position: relative;
+	width: 114px;
+	height: 114px;
+	margin: 30px auto 25px auto;
+	
+	svg {
+		width: 114px;
+		height: 114px;
+	}
+	
+	.bg {
+		fill: none;
+		stroke-width: 10px;
+		stroke: #1B2A33;
+	}
+	
+	.progress {
+		fill: none;
+		stroke-width: 10px;
+		stroke: #27E1AE;
+		stroke-linecap: round;
+    stroke-dasharray: (52*2*3.14);
+		stroke-dashoffset: 60;
+		transform: rotate(-90deg);
+		transform-origin: 50% 50%;
+		animation: big 1.5s ease-out;
+	}
+	
+	.text {
+		position: absolute;
+		width: 100%;
+		top: 37px;
+		font-size: 24px;
+		text-align: center;
+		font-weight: 400;
+		line-height: 22px;
+		
+		.small {
+			font-size: 14px;
+			color: #648192;
+		}
+		
+	}
+	
+}
+
+.circles-small {
+	margin: 0 auto;
+	width: 400px;
+	height: 80px;
+	text-align: center;
+}
+
+.circle-small {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 20px;
+	
+	svg {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.bg {
+		fill: none;
+		stroke-width: 6px;
+		stroke: #1B2A33;
+	}
+	
+	.progress {
+		fill: none;
+		stroke-width: 6px;
+		stroke: #5CE1EC;
+		stroke-linecap: round;
+    stroke-dasharray: (37*2*3.14);
+		transform: rotate(-90deg);
+		transform-origin: 50% 50%;
+		
+		&.one {
+			stroke-dashoffset: 80;
+			animation: one 1.5s ease-out;
+		}
+		
+		&.two {
+			stroke-dashoffset: 140;
+			animation: two 1.5s ease-out;
+		}
+		
+	}
+	
+	.text {
+		position: absolute;
+		width: 100%;
+		top: 26px;
+		font-size: 17px;
+		text-align: center;
+		font-weight: 400;
+		line-height: 16px;
+		
+		.small {
+			font-size: 12px;
+			color: #648192;
+		}
+		
+	}
+	
+}
+
+@keyframes big {
+	from {
+		stroke-dashoffset: (52*2*3.14);
+	}
+	to {
+		stroke-dashoffset: 60;
+	}
+}
+
+@keyframes one {
+	from {
+		stroke-dashoffset: (37*2*3.14);
+	}
+	to {
+		stroke-dashoffset: 80;
+	}
+}
+
+@keyframes two {
+	from {
+		stroke-dashoffset: (37*2*3.14);
+	}
+	to {
+		stroke-dashoffset: 140;
+	}
+}

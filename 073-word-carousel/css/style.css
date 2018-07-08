@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+  background: #f39c12;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 49.5%;
+  left: 0;
+  right: 0;
+  margin-top: -22.5px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+  height: 45px;
+}
+.carousel .pre {
+  position: absolute;
+  top: 0;
+  right: 56%;
+  height: 45px;
+  text-shadow: 2px 2px 2px #e67e22;
+}
+.carousel .change_outer {
+  position: absolute;
+  top: 0;
+  left: 46%;
+  text-align: left;
+  height: 45px;
+  overflow: hidden;
+}
+.carousel .change_outer .change_inner {
+  position: relative;
+  -webkit-animation: rotate 8s ease-in-out infinite;
+          animation: rotate 8s ease-in-out infinite;
+}
+.carousel .change_outer .element {
+  display: block;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #e67e22;
+}
+
+@-webkit-keyframes rotate {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25%,45% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+  }
+  50%,70% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  75%,95% {
+    -webkit-transform: translateY(-135px);
+            transform: translateY(-135px);
+  }
+  100% {
+    -webkit-transform: translateY(-180px);
+            transform: translateY(-180px);
+  }
+}
+
+@keyframes rotate {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25%,45% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+  }
+  50%,70% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  75%,95% {
+    -webkit-transform: translateY(-135px);
+            transform: translateY(-135px);
+  }
+  100% {
+    -webkit-transform: translateY(-180px);
+            transform: translateY(-180px);
+  }
+}

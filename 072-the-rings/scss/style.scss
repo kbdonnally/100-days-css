@@ -1,0 +1,54 @@
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.2);
+	overflow: hidden;
+	background: #3498db;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 100px;
+	left: 100px;
+	transform-style: preserve-3d;
+}
+
+.ring {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	transform-origin: 50% 50%;
+}
+
+@for $i from 1 through 10 {
+	.ring-#{$i} {
+		animation: rotate-#{$i} 5s ease-in-out infinite;
+	}
+
+	@keyframes rotate-#{$i} {
+		$start: ($i * 4);
+		#{$start}% {
+			transform: rotateX(0) rotateY(0) rotateZ(0);
+		}
+		100% {
+			transform: rotateX(360deg) rotateY(-360deg) rotateZ(0);
+		}
+	}
+}

@@ -1,0 +1,78 @@
+$numberOfRings: 30; // sync with HTML
+$numberOfStripes: 24; // sync with HTML
+$animationDuration: 4s;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #2a2a2a;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.warp {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 100px;
+	left: 100px;
+
+	.ring {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+
+		.stripe {
+			position: absolute;
+			width: 2px;
+			height: 20px;
+			top: 90px;
+			left: 99px;
+			background: #fff;
+		}
+
+	}
+
+	@for $i from 1 through $numberOfRings {
+		$nullbase1: $i - 1;
+		$timeOffset: $nullbase1 * ($animationDuration / $numberOfRings) * -1;
+		.ring-#{$i} {
+			animation: ring $animationDuration cubic-bezier(.98,.02,.97,.12) $timeOffset infinite;
+
+			@for $j from 1 through $numberOfStripes {
+				$nullBase2: $j - 1;
+				$degree: ((360 / $numberOfStripes) * $nullBase2) - (random() * 10);
+				$offset: 100 - (random() * 40);
+				.stripe-#{$j} {
+					transform: rotate(($degree)+deg) translate3d(0, ($offset)+px, 0) scaleY(($offset / 100));
+				}
+			}
+
+		}
+	}
+
+}
+
+@keyframes ring {
+	0% {
+		transform: scale(0);
+		opacity: 0.1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(4);
+		opacity: 1;
+	}
+}

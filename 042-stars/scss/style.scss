@@ -1,0 +1,87 @@
+$numberOfStars: 300; // update together with html
+$numberOfShootingStars: 6; // update together with html
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.stage {
+  position: absolute;
+	width: 280px;
+	height: 280px;
+	top: 60px;
+	left: 60px;
+	background: #1d4253;
+	background: -moz-linear-gradient(top, #1d4253 0%, #6bb5c4 100%); 
+	background: -webkit-linear-gradient(top, #1d4253 0%,#6bb5c4 100%);
+	background: linear-gradient(to bottom, #1d4253 0%,#6bb5c4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4253', endColorstr='#6bb5c4',GradientType=0 );
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.star {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-radius: 1px;
+	background: #fff;
+}
+
+@for $i from 1 through $numberOfStars {
+	.star-#{$i} {
+		top: random(280) + px;
+		left: random(280) + px;
+		animation: ((random(20)+20)/10)+s flickr (random(20)/-10)+s infinite;
+	}
+}
+
+.shooting-star {
+	position: absolute;
+	top: 0;
+	left: -120px;
+	width: 120px;
+	height: 2px;
+	background: url(http://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+	background-size: 100% 100%;
+	transform: rotate(20deg);
+}
+
+@for $i from 1 through $numberOfShootingStars {
+	.shooting-star-#{$i} {
+		top: (random(100)-30)+px;
+		animation: (random(5)+20)+s shooting-star (random(250)/10)+s infinite;
+	}
+}
+
+@keyframes flickr {
+	0%,100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+}
+
+@keyframes shooting-star {
+	0% {
+		transform: translate3d(0,0,0) rotate(20deg);
+	}
+	10%,100% {
+		transform: translate3d(451px,164px,0) rotate(20deg);
+	}
+}

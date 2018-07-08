@@ -1,0 +1,192 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #8e44ad;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.puppet {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  cursor: pointer;
+}
+.puppet:hover .head {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+.puppet:hover .body {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+.puppet:hover .body .arm-left .upper {
+  -webkit-transform: rotate(100deg) translate3d(0, 0, 0);
+          transform: rotate(100deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .arm-left .upper .lower {
+  -webkit-transform: rotate(-70deg) translate3d(0, 0, 0);
+          transform: rotate(-70deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .arm-right .upper {
+  -webkit-transform: rotate(-100deg) translate3d(0, 0, 0);
+          transform: rotate(-100deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .arm-right .upper .lower {
+  -webkit-transform: rotate(70deg) translate3d(0, 0, 0);
+          transform: rotate(70deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .leg-left .upper {
+  -webkit-transform: rotate(100deg) translate3d(0, 0, 0);
+          transform: rotate(100deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .leg-left .upper .lower {
+  -webkit-transform: rotate(-80deg) translate3d(0, 0, 0);
+          transform: rotate(-80deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .leg-right .upper {
+  -webkit-transform: rotate(-100deg) translate3d(0, 0, 0);
+          transform: rotate(-100deg) translate3d(0, 0, 0);
+}
+.puppet:hover .body .leg-right .upper .lower {
+  -webkit-transform: rotate(80deg) translate3d(0, 0, 0);
+          transform: rotate(80deg) translate3d(0, 0, 0);
+}
+.puppet .head {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px auto;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body {
+  position: relative;
+  height: 100px;
+  width: 50px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .arm {
+  position: absolute;
+  top: 0;
+}
+.puppet .body .arm-left {
+  left: -10px;
+}
+.puppet .body .arm-left .upper {
+  -webkit-transform: rotate(10deg) translate3d(0, 0, 0);
+          transform: rotate(10deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .arm-left .upper .lower {
+  -webkit-transform: rotate(-5deg) translate3d(0, 0, 0);
+          transform: rotate(-5deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .arm-right {
+  right: -10px;
+}
+.puppet .body .arm-right .upper {
+  -webkit-transform: rotate(-10deg) translate3d(0, 0, 0);
+          transform: rotate(-10deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .arm-right .upper .lower {
+  -webkit-transform: rotate(5deg) translate3d(0, 0, 0);
+          transform: rotate(5deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .arm .upper {
+  position: relative;
+  height: 60px;
+  width: 16px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-transform-origin: 8px 8px;
+          transform-origin: 8px 8px;
+}
+.puppet .body .arm .upper .lower {
+  position: absolute;
+  height: 50px;
+  width: 16px;
+  bottom: -34px;
+  left: 0;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-transform-origin: 8px 8px;
+          transform-origin: 8px 8px;
+}
+.puppet .body .leg {
+  position: absolute;
+  top: 78px;
+}
+.puppet .body .leg-left {
+  left: 0px;
+}
+.puppet .body .leg-left .upper {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+          transform: rotate(0deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .leg-left .upper .lower {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+          transform: rotate(0deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .leg-right {
+  right: 0px;
+}
+.puppet .body .leg-right .upper {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+          transform: rotate(0deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .leg-right .upper .lower {
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+          transform: rotate(0deg) translate3d(0, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.puppet .body .leg .upper {
+  position: relative;
+  height: 70px;
+  width: 24px;
+  background: #fff;
+  border-radius: 12px;
+  -webkit-transform-origin: 12px 12px;
+          transform-origin: 12px 12px;
+}
+.puppet .body .leg .upper .lower {
+  position: absolute;
+  height: 70px;
+  width: 24px;
+  bottom: -46px;
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  -webkit-transform-origin: 12px 12px;
+          transform-origin: 12px 12px;
+}

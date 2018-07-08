@@ -1,0 +1,414 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.radio {
+  display: none;
+}
+
+.triggers {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  border-top: 2px solid #888;
+  padding: 5px 0;
+}
+
+.trigger {
+  position: relative;
+  float: left;
+  width: 34px;
+  height: 34px;
+  margin: 3px;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.trigger:hover {
+  background: #999;
+}
+
+#label-0 {
+  clear: both;
+}
+
+.light {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -120px;
+  left: 185px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 15px 0 #fff;
+  opacity: 0;
+  -webkit-animation: none;
+          animation: none;
+}
+
+#morse-c:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-a:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s;
+}
+
+#morse-b:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-c:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-d:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s;
+}
+
+#morse-e:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s;
+          animation: short-1 1.5s 0s;
+}
+
+#morse-f:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-g:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s;
+}
+
+#morse-h:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-i:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s;
+}
+
+#morse-j:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s;
+}
+
+#morse-k:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s;
+}
+
+#morse-l:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-m:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s;
+}
+
+#morse-n:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s;
+}
+
+#morse-o:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s;
+}
+
+#morse-p:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-q:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+}
+
+#morse-r:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s;
+}
+
+#morse-s:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s;
+}
+
+#morse-t:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s;
+          animation: long-1 1.5s 0s;
+}
+
+#morse-u:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s;
+}
+
+#morse-v:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+}
+
+#morse-w:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s;
+}
+
+#morse-x:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s;
+}
+
+#morse-y:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s;
+}
+
+#morse-z:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s;
+}
+
+#morse-0:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+}
+
+#morse-1:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+          animation: short-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+}
+
+#morse-2:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+}
+
+#morse-3:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, long-4 1.5s 4.5s, long-5 1.5s 6s;
+}
+
+#morse-4:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, long-5 1.5s 6s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, long-5 1.5s 6s;
+}
+
+#morse-5:checked ~ .light {
+  -webkit-animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+          animation: short-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+}
+
+#morse-6:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+          animation: long-1 1.5s 0s, short-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+}
+
+#morse-7:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, short-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+}
+
+#morse-8:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, short-4 1.5s 4.5s, short-5 1.5s 6s;
+}
+
+#morse-9:checked ~ .light {
+  -webkit-animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, short-5 1.5s 6s;
+          animation: long-1 1.5s 0s, long-2 1.5s 1.5s, long-3 1.5s 3s, long-4 1.5s 4.5s, short-5 1.5s 6s;
+}
+
+@-webkit-keyframes short-1 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+
+@keyframes short-1 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes long-1 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@keyframes long-1 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes short-2 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@keyframes short-2 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes long-2 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@keyframes long-2 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes short-3 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@keyframes short-3 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes long-3 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@keyframes long-3 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes short-4 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@keyframes short-4 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes long-4 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@keyframes long-4 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes short-5 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@keyframes short-5 {
+  0%, 40%, 60%, 100% {
+    opacity: 0;
+  }
+  41%, 59% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes long-5 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}
+@keyframes long-5 {
+  0%, 15%, 85%, 100% {
+    opacity: 0;
+  }
+  16%, 84% {
+    opacity: 1;
+  }
+}

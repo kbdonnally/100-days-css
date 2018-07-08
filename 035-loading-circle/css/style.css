@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #1BBE9E;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bg {
+  fill: none;
+  stroke: #12836D;
+  stroke-width: 4;
+}
+
+.loader {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 288;
+  -webkit-animation: line 4s linear infinite, spin 3s linear infinite;
+          animation: line 4s linear infinite, spin 3s linear infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes line {
+  0% {
+    stroke-dashoffset: 1152;
+  }
+  100% {
+    stroke-dashoffset: 576;
+  }
+}
+
+@keyframes line {
+  0% {
+    stroke-dashoffset: 1152;
+  }
+  100% {
+    stroke-dashoffset: 576;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(-90deg) translate3d(0, 0, 0);
+            transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(270deg) translate3d(0, 0, 0);
+            transform: rotate(270deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(-90deg) translate3d(0, 0, 0);
+            transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(270deg) translate3d(0, 0, 0);
+            transform: rotate(270deg) translate3d(0, 0, 0);
+  }
+}

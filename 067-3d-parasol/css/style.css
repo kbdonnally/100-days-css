@@ -1,0 +1,262 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #F5CE51;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-perspective: 350px;
+          perspective: 350px;
+}
+
+.parasol {
+  position: absolute;
+  top: 8%;
+  left: 13%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(70deg) rotateY(-15deg);
+          transform: rotateX(70deg) rotateY(-15deg);
+}
+.parasol .shadowPole {
+  position: absolute;
+  z-index: -1;
+  width: 6px;
+  height: 50px;
+  top: 100px;
+  left: 97px;
+  background: #AB9038;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: translateZ(-150px) rotateZ(-90deg) rotateZ(-15deg);
+          transform: translateZ(-150px) rotateZ(-90deg) rotateZ(-15deg);
+  box-shadow: 0 0 2px 1px #AB9038;
+  border-radius: 2px;
+}
+.parasol .pole {
+  position: absolute;
+  z-index: 2;
+  width: 6px;
+  height: 150px;
+  top: 100px;
+  left: 97px;
+  background: #888;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: translateZ(-1px) rotateX(-90deg);
+          transform: translateZ(-1px) rotateX(-90deg);
+  border-radius: 2px;
+}
+.parasol .shadowTop {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9);
+          transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9);
+  -webkit-animation: rotateTopShadow 5s linear infinite;
+          animation: rotateTopShadow 5s linear infinite;
+}
+.parasol .shadowTop .triangle {
+  position: absolute;
+  top: 100px;
+  left: 77px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 98px 25px;
+  border-color: transparent transparent #AB9038 transparent;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  box-shadow: 0 0 4px 2px #AB9038;
+}
+.parasol .shadowTop .triangle-1 {
+  -webkit-transform: rotateZ(0deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(0deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-2 {
+  -webkit-transform: rotateZ(30deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(30deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-3 {
+  -webkit-transform: rotateZ(60deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(60deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-4 {
+  -webkit-transform: rotateZ(90deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(90deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-5 {
+  -webkit-transform: rotateZ(120deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(120deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-6 {
+  -webkit-transform: rotateZ(150deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(150deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-7 {
+  -webkit-transform: rotateZ(180deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(180deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-8 {
+  -webkit-transform: rotateZ(210deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(210deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-9 {
+  -webkit-transform: rotateZ(240deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(240deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-10 {
+  -webkit-transform: rotateZ(270deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(270deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-11 {
+  -webkit-transform: rotateZ(300deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(300deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .shadowTop .triangle-12 {
+  -webkit-transform: rotateZ(330deg) rotateX(-24deg) translateY(-1px);
+          transform: rotateZ(330deg) rotateX(-24deg) translateY(-1px);
+}
+.parasol .top {
+  position: relative;
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotateTop 5s linear infinite;
+          animation: rotateTop 5s linear infinite;
+}
+.parasol .top .triangle {
+  position: absolute;
+  top: 100px;
+  left: 77px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 24px 98px 24px;
+  border-color: transparent transparent #fff transparent;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+.parasol .top .triangle-1 {
+  -webkit-transform: rotateZ(0deg) rotateX(-24deg);
+          transform: rotateZ(0deg) rotateX(-24deg);
+}
+.parasol .top .triangle-2 {
+  -webkit-transform: rotateZ(30deg) rotateX(-24deg);
+          transform: rotateZ(30deg) rotateX(-24deg);
+}
+.parasol .top .triangle-3 {
+  -webkit-transform: rotateZ(60deg) rotateX(-24deg);
+          transform: rotateZ(60deg) rotateX(-24deg);
+}
+.parasol .top .triangle-4 {
+  -webkit-transform: rotateZ(90deg) rotateX(-24deg);
+          transform: rotateZ(90deg) rotateX(-24deg);
+}
+.parasol .top .triangle-5 {
+  -webkit-transform: rotateZ(120deg) rotateX(-24deg);
+          transform: rotateZ(120deg) rotateX(-24deg);
+}
+.parasol .top .triangle-6 {
+  -webkit-transform: rotateZ(150deg) rotateX(-24deg);
+          transform: rotateZ(150deg) rotateX(-24deg);
+}
+.parasol .top .triangle-7 {
+  -webkit-transform: rotateZ(180deg) rotateX(-24deg);
+          transform: rotateZ(180deg) rotateX(-24deg);
+}
+.parasol .top .triangle-8 {
+  -webkit-transform: rotateZ(210deg) rotateX(-24deg);
+          transform: rotateZ(210deg) rotateX(-24deg);
+}
+.parasol .top .triangle-9 {
+  -webkit-transform: rotateZ(240deg) rotateX(-24deg);
+          transform: rotateZ(240deg) rotateX(-24deg);
+}
+.parasol .top .triangle-10 {
+  -webkit-transform: rotateZ(270deg) rotateX(-24deg);
+          transform: rotateZ(270deg) rotateX(-24deg);
+}
+.parasol .top .triangle-11 {
+  -webkit-transform: rotateZ(300deg) rotateX(-24deg);
+          transform: rotateZ(300deg) rotateX(-24deg);
+}
+.parasol .top .triangle-12 {
+  -webkit-transform: rotateZ(330deg) rotateX(-24deg);
+          transform: rotateZ(330deg) rotateX(-24deg);
+}
+.parasol .top .triangle-1 {
+  border-color: transparent transparent #D70606 transparent;
+}
+.parasol .top .triangle-3 {
+  border-color: transparent transparent #D70606 transparent;
+}
+.parasol .top .triangle-5 {
+  border-color: transparent transparent #D70606 transparent;
+}
+.parasol .top .triangle-7 {
+  border-color: transparent transparent #D70606 transparent;
+}
+.parasol .top .triangle-9 {
+  border-color: transparent transparent #D70606 transparent;
+}
+.parasol .top .triangle-11 {
+  border-color: transparent transparent #D70606 transparent;
+}
+
+@-webkit-keyframes rotateTop {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotateTop {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotateTopShadow {
+  from {
+    -webkit-transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(0deg);
+            transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(360deg);
+            transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(360deg);
+  }
+}
+@keyframes rotateTopShadow {
+  from {
+    -webkit-transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(0deg);
+            transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(360deg);
+            transform: translateZ(-150px) translateX(120px) translateY(-40px) scale(0.9) rotateZ(360deg);
+  }
+}

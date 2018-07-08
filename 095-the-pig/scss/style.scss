@@ -1,0 +1,140 @@
+$pink: #F7949A;
+$pinkLight: #FFB7BC;
+$pinkDark: #CE666D;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #FFDCB5;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	
+	.head {
+		position: relative;
+		width: 160px;
+		height: 160px;
+		background: $pink;
+		border-radius: 50%;
+	}
+	
+	.ear {
+		box-sizing: border-box;
+		position: absolute;
+		z-index: -1;
+		width: 60px;
+		height: 60px;
+		top: -5px;
+		background: $pinkLight;
+		border: 7px solid $pink;
+		
+		
+		&-l {
+			border-radius: 15px 0 0 0;
+			left: 10px;
+			transform: rotate(-12deg) skewY(27deg);
+		}
+		
+		&-r {
+			border-radius: 0 15px 0 0;
+			right: 10px;
+			transform: rotate(12deg) skewY(-27deg);
+		}
+		
+	}
+	
+	.eye {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		top: 42%;
+		background: #fff;
+		border-radius: 50%;
+		animation: eyes 15s ease-in-out infinite;
+		
+		&:before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 4px;
+			height: 4px;
+			background: #333;
+			border-radius: 50%;
+			top: 9px;
+			left: 9px;
+		animation: pupills 15s ease-in-out infinite;
+		}
+		
+		&-l {
+			left: 24%;
+		}
+		
+		&-r {
+			right: 24%;
+		}
+		
+	}
+	
+	.nose {
+		position: absolute;
+		height: 50px;
+		width: 60px;
+		top: 55%;
+		left: 50px;
+		background: $pinkLight;
+		border-radius: 100px / 80px;
+	}
+	
+	.nostril {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		top: 15px;
+		background: $pinkDark;
+		border-radius: 50%;
+		
+		&-l {
+			left: 14px;
+		}
+		
+		&-r {
+			right: 14px;
+		}
+		
+	}
+	
+}
+
+@keyframes eyes {
+	0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%  {
+		transform: scaleY(1);
+	}
+	24%, 66%, 90% {
+		transform: scaleY(0);
+	}
+}
+
+@keyframes pupills {
+	0%, 23%, 25%, 65%, 67%, 89%, 91%, 100%  {
+		transform: scaleY(1);
+	}
+	24%, 66%, 90% {
+		transform: scaleY(2);
+	}
+}

@@ -1,0 +1,146 @@
+$sideLength: 80;
+$triangleHeight: $sideLength * 1.732;
+$translate: 129.2px;
+$degreeZ: 8deg;
+$degreeY: 35.264deg;
+$degreeX1: 135deg;
+$degreeX2: 45deg;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #2c3e50;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	perspective: 1000px;
+}
+
+.ikosaeder {
+	transform-style: preserve-3d;
+	transform: rotateX(-40deg) rotateY(-40deg);
+	transition: all 3s ease-in-out;
+	height: 280px;
+	width: 160px;
+	cursor: pointer;
+
+	&:hover {
+		transform: rotateX(-400deg) rotateY(-400deg);
+
+		.side {
+			opacity: 0.5;
+		}
+	}
+
+	.side {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 $sideLength+px $triangleHeight+px $sideLength+px;
+		border-color: transparent transparent #eee transparent;
+		transform-origin: 50% 100%;
+		transition: all 3s ease-in-out;
+	}
+
+	.side-1 {
+		transform: translateZ($translate) rotateZ(90deg) rotateX(159.095deg);
+	}
+	.side-2 {
+		transform: translateZ($translate) rotateZ(-90deg) rotateX(159.095deg);
+	}
+	.side-3 {
+		transform: translateZ(-1 * $translate) rotateZ(90deg) rotateX(-159.095deg);
+	}
+	.side-4 {
+		transform: translateZ(-1 * $translate) rotateZ(-90deg) rotateX(-159.095deg);
+	}
+	.side-5 {
+		transform: rotateY(-90deg) translateZ($translate) rotateX(20.905deg);
+	}
+	.side-6 {
+		transform: rotateY(-90deg) translateZ($translate) rotateX(159.095deg);
+	}
+	.side-7 {
+		transform: rotateY(-90deg) translateZ(-1 * $translate) rotateX(-20.905deg);
+	}
+	.side-8 {
+		transform: rotateY(-90deg) translateZ(-1 * $translate) rotateX(-159.095deg);
+	}
+	.side-9 {
+		transform: translateY($translate) rotateX(69.095deg);
+	}
+	.side-10 {
+		transform: translateY($translate) rotateX(-69.095deg);
+	}
+	.side-11 {
+		transform: translateY(-1 * $translate) rotateX(110.905deg);
+	}
+	.side-12 {
+		transform: translateY(-1 * $translate) rotateX(-110.905deg);
+	}
+	.side-13 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY(-1 * $translate) translateX($sideLength+px) rotateX(-1 * $degreeX1) rotateY(-1 * $degreeY) rotateZ(-1 * $degreeZ);
+	}
+	.side-14 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY(-1 * $translate) translateX($sideLength+px) rotateX($degreeX1) rotateY($degreeY) rotateZ(-1 * $degreeZ);
+	}
+	.side-15 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY(-1 * $translate) translateX(-1 * $sideLength+px) rotateX(-1 * $degreeX1) rotateY($degreeY) rotateZ($degreeZ);
+	}
+	.side-16 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY(-1 * $translate) translateX(-1 * $sideLength+px) rotateX($degreeX1) rotateY(-1 * $degreeY) rotateZ($degreeZ);
+	}
+	.side-17 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY($translate) translateX($sideLength+px) rotateX($degreeX2) rotateY(-1 * $degreeY) rotateZ(-1 * $degreeZ);
+	}
+	.side-18 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY($translate) translateX($sideLength+px) rotateX(-1 * $degreeX2) rotateY($degreeY) rotateZ(-1 * $degreeZ);
+	}
+	.side-19 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY($translate) translateX(-1 * $sideLength+px) rotateX($degreeX2) rotateY($degreeY) rotateZ($degreeZ);
+	}
+	.side-20 {
+		border-width: $triangleHeight+px $sideLength+px 0 $sideLength+px;
+		transform: translateY($translate) translateX(-1 * $sideLength+px) rotateX(-1 * $degreeX2) rotateY(-1 * $degreeY) rotateZ($degreeZ);
+	}
+
+	@for $i from 1 through 6 {
+		$id: $i*2;
+		.side-#{$id} {
+			$rgb: #e1e1e1;
+			border-color: transparent transparent $rgb transparent;
+		}
+	}
+	@for $i from 13 through 20 {
+		.side-#{$i} {
+			$rgb: #fff;
+			border-color: $rgb transparent transparent transparent;
+		}
+	}
+
+}
+

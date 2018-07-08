@@ -1,0 +1,199 @@
+$bgColor: #684595;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: $bgColor;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.checkbox {
+	display: none;
+	
+	&:checked ~ .microphone {
+		
+		.circle {
+			animation: circle 5s linear infinite;
+		}
+		
+		.icon {
+			animation: icon .7s ease-in-out both;
+		}
+		
+		.dots {
+			animation: dots 1s ease-in-out both;
+		}
+		
+		.dot-1 {
+			animation: dot 1s ease-in-out infinite;
+		}
+		
+		.dot-2 {
+			animation: dot 1s ease-in-out -0.2s infinite;
+		}
+		
+		.dot-3 {
+			animation: dot 1s ease-in-out -0.4s infinite;
+		}
+		
+	}
+	
+}
+
+.label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+	cursor: pointer;
+}
+
+.microphone {
+  position: absolute;
+	width: 100px;
+	height: 100px;
+  top: 150px;
+  left: 150px;
+	
+	.circle {
+		fill: none;
+		stroke: #fff;
+		stroke-width: 3;
+		stroke-linecap: round;
+		transform-origin: 50% 50%;
+	}
+	
+	.icon {
+		position: absolute;
+		width: 24px;
+		height: 66px;
+		top: 16px;
+		left: 38px;
+		
+		.body {
+			position: relative;
+			width: 24px;
+			height: 52px;
+			background: #fff;
+			border-radius: 12px;
+			
+			.fill {
+				position: relative;
+				width: 6px;
+				height: 16px;
+				top: 7px;
+				left: 9px;
+				background: $bgColor;
+				border-radius: 3px;
+			}
+			
+		}
+		
+		.foot_v {
+			position: absolute;
+			width: 4px;
+			height: 15px;
+			top: 51px;
+			left: 10px;
+			background: #fff;
+		}
+		
+		.foot_h {
+			position: absolute;
+			width: 24px;
+			height: 4px;
+			bottom: 0;
+			left: 0;
+			background: #fff;
+			border-radius: 2px;
+		}
+		
+	}
+	
+	.dots {
+		opacity: 0;
+		position: absolute;
+		width: 50px;
+		height: 10px;
+		top: 45px;
+		left: 25px;
+		
+		.dot {
+			float: left;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #fff;
+		}
+		
+		.dot-2 {
+			margin: 0 10px;
+		}
+		
+	}
+	
+}
+
+@keyframes circle {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 296 296;
+		transform: rotate(0deg);
+	}
+	100% {
+		stroke-dashoffset: (-296 * 2);
+		stroke-dasharray: 296 296;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes dot {
+	0% {
+		transform: translateY(5px);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(5px)
+	}
+}
+
+@keyframes icon {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	30% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes dots {
+	0%, 60% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

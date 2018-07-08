@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #D33526;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.ball-big {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: ball 7s ease-in-out infinite;
+          animation: ball 7s ease-in-out infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.ball-big .plane {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .3;
+}
+.ball-big .plane-1 {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+.ball-big .plane-2 {
+  -webkit-transform: rotateX(30deg);
+          transform: rotateX(30deg);
+}
+.ball-big .plane-3 {
+  -webkit-transform: rotateX(60deg);
+          transform: rotateX(60deg);
+}
+.ball-big .plane-4 {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+.ball-big .plane-5 {
+  -webkit-transform: rotateX(120deg);
+          transform: rotateX(120deg);
+}
+.ball-big .plane-6 {
+  -webkit-transform: rotateX(150deg);
+          transform: rotateX(150deg);
+}
+
+@-webkit-keyframes ball {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg) rotateX(180deg) rotateZ(20deg);
+            transform: rotateY(45deg) rotateX(180deg) rotateZ(20deg);
+  }
+  50% {
+    -webkit-transform: rotateY(225deg) rotateX(0deg) rotateZ(90deg);
+            transform: rotateY(225deg) rotateX(0deg) rotateZ(90deg);
+  }
+  75% {
+    -webkit-transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+            transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes ball {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg) rotateX(180deg) rotateZ(20deg);
+            transform: rotateY(45deg) rotateX(180deg) rotateZ(20deg);
+  }
+  50% {
+    -webkit-transform: rotateY(225deg) rotateX(0deg) rotateZ(90deg);
+            transform: rotateY(225deg) rotateX(0deg) rotateZ(90deg);
+  }
+  75% {
+    -webkit-transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+            transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+}

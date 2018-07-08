@@ -1,0 +1,1873 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #34495e;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.trigger {
+  box-sizing: border-box;
+  position: absolute;
+  width: 400px;
+  height: 10px;
+  left: 0;
+  cursor: pointer;
+}
+
+.plane {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  width: 400px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  background: #e67e22;
+  overflow: hidden;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.text-back, .text-front {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  width: 400px;
+  top: 169px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.text-front {
+  z-index: 10;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.trigger-0 {
+  top: -2px;
+}
+.trigger-0:hover ~ .plane {
+  height: 0px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-1 {
+  top: 0px;
+}
+.trigger-1:hover ~ .plane {
+  height: 2px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-2 {
+  top: 2px;
+}
+.trigger-2:hover ~ .plane {
+  height: 4px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-3 {
+  top: 4px;
+}
+.trigger-3:hover ~ .plane {
+  height: 6px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-4 {
+  top: 6px;
+}
+.trigger-4:hover ~ .plane {
+  height: 8px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-5 {
+  top: 8px;
+}
+.trigger-5:hover ~ .plane {
+  height: 10px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-6 {
+  top: 10px;
+}
+.trigger-6:hover ~ .plane {
+  height: 12px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-7 {
+  top: 12px;
+}
+.trigger-7:hover ~ .plane {
+  height: 14px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-8 {
+  top: 14px;
+}
+.trigger-8:hover ~ .plane {
+  height: 16px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-9 {
+  top: 16px;
+}
+.trigger-9:hover ~ .plane {
+  height: 18px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-10 {
+  top: 18px;
+}
+.trigger-10:hover ~ .plane {
+  height: 20px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-11 {
+  top: 20px;
+}
+.trigger-11:hover ~ .plane {
+  height: 22px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-12 {
+  top: 22px;
+}
+.trigger-12:hover ~ .plane {
+  height: 24px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-13 {
+  top: 24px;
+}
+.trigger-13:hover ~ .plane {
+  height: 26px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-14 {
+  top: 26px;
+}
+.trigger-14:hover ~ .plane {
+  height: 28px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-15 {
+  top: 28px;
+}
+.trigger-15:hover ~ .plane {
+  height: 30px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-16 {
+  top: 30px;
+}
+.trigger-16:hover ~ .plane {
+  height: 32px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-17 {
+  top: 32px;
+}
+.trigger-17:hover ~ .plane {
+  height: 34px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-18 {
+  top: 34px;
+}
+.trigger-18:hover ~ .plane {
+  height: 36px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-19 {
+  top: 36px;
+}
+.trigger-19:hover ~ .plane {
+  height: 38px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-20 {
+  top: 38px;
+}
+.trigger-20:hover ~ .plane {
+  height: 40px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-21 {
+  top: 40px;
+}
+.trigger-21:hover ~ .plane {
+  height: 42px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-22 {
+  top: 42px;
+}
+.trigger-22:hover ~ .plane {
+  height: 44px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-23 {
+  top: 44px;
+}
+.trigger-23:hover ~ .plane {
+  height: 46px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-24 {
+  top: 46px;
+}
+.trigger-24:hover ~ .plane {
+  height: 48px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-25 {
+  top: 48px;
+}
+.trigger-25:hover ~ .plane {
+  height: 50px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-26 {
+  top: 50px;
+}
+.trigger-26:hover ~ .plane {
+  height: 52px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-27 {
+  top: 52px;
+}
+.trigger-27:hover ~ .plane {
+  height: 54px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-28 {
+  top: 54px;
+}
+.trigger-28:hover ~ .plane {
+  height: 56px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-29 {
+  top: 56px;
+}
+.trigger-29:hover ~ .plane {
+  height: 58px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-30 {
+  top: 58px;
+}
+.trigger-30:hover ~ .plane {
+  height: 60px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-31 {
+  top: 60px;
+}
+.trigger-31:hover ~ .plane {
+  height: 62px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-32 {
+  top: 62px;
+}
+.trigger-32:hover ~ .plane {
+  height: 64px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-33 {
+  top: 64px;
+}
+.trigger-33:hover ~ .plane {
+  height: 66px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-34 {
+  top: 66px;
+}
+.trigger-34:hover ~ .plane {
+  height: 68px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-35 {
+  top: 68px;
+}
+.trigger-35:hover ~ .plane {
+  height: 70px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-36 {
+  top: 70px;
+}
+.trigger-36:hover ~ .plane {
+  height: 72px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-37 {
+  top: 72px;
+}
+.trigger-37:hover ~ .plane {
+  height: 74px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-38 {
+  top: 74px;
+}
+.trigger-38:hover ~ .plane {
+  height: 76px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-39 {
+  top: 76px;
+}
+.trigger-39:hover ~ .plane {
+  height: 78px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-40 {
+  top: 78px;
+}
+.trigger-40:hover ~ .plane {
+  height: 80px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-41 {
+  top: 80px;
+}
+.trigger-41:hover ~ .plane {
+  height: 82px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-42 {
+  top: 82px;
+}
+.trigger-42:hover ~ .plane {
+  height: 84px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-43 {
+  top: 84px;
+}
+.trigger-43:hover ~ .plane {
+  height: 86px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-44 {
+  top: 86px;
+}
+.trigger-44:hover ~ .plane {
+  height: 88px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-45 {
+  top: 88px;
+}
+.trigger-45:hover ~ .plane {
+  height: 90px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-46 {
+  top: 90px;
+}
+.trigger-46:hover ~ .plane {
+  height: 92px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-47 {
+  top: 92px;
+}
+.trigger-47:hover ~ .plane {
+  height: 94px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-48 {
+  top: 94px;
+}
+.trigger-48:hover ~ .plane {
+  height: 96px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-49 {
+  top: 96px;
+}
+.trigger-49:hover ~ .plane {
+  height: 98px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-50 {
+  top: 98px;
+}
+.trigger-50:hover ~ .plane {
+  height: 100px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-51 {
+  top: 100px;
+}
+.trigger-51:hover ~ .plane {
+  height: 102px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-52 {
+  top: 102px;
+}
+.trigger-52:hover ~ .plane {
+  height: 104px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-53 {
+  top: 104px;
+}
+.trigger-53:hover ~ .plane {
+  height: 106px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-54 {
+  top: 106px;
+}
+.trigger-54:hover ~ .plane {
+  height: 108px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-55 {
+  top: 108px;
+}
+.trigger-55:hover ~ .plane {
+  height: 110px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-56 {
+  top: 110px;
+}
+.trigger-56:hover ~ .plane {
+  height: 112px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-57 {
+  top: 112px;
+}
+.trigger-57:hover ~ .plane {
+  height: 114px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-58 {
+  top: 114px;
+}
+.trigger-58:hover ~ .plane {
+  height: 116px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-59 {
+  top: 116px;
+}
+.trigger-59:hover ~ .plane {
+  height: 118px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-60 {
+  top: 118px;
+}
+.trigger-60:hover ~ .plane {
+  height: 120px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-61 {
+  top: 120px;
+}
+.trigger-61:hover ~ .plane {
+  height: 122px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-62 {
+  top: 122px;
+}
+.trigger-62:hover ~ .plane {
+  height: 124px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-63 {
+  top: 124px;
+}
+.trigger-63:hover ~ .plane {
+  height: 126px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-64 {
+  top: 126px;
+}
+.trigger-64:hover ~ .plane {
+  height: 128px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-65 {
+  top: 128px;
+}
+.trigger-65:hover ~ .plane {
+  height: 130px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-66 {
+  top: 130px;
+}
+.trigger-66:hover ~ .plane {
+  height: 132px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-67 {
+  top: 132px;
+}
+.trigger-67:hover ~ .plane {
+  height: 134px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-68 {
+  top: 134px;
+}
+.trigger-68:hover ~ .plane {
+  height: 136px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-69 {
+  top: 136px;
+}
+.trigger-69:hover ~ .plane {
+  height: 138px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-70 {
+  top: 138px;
+}
+.trigger-70:hover ~ .plane {
+  height: 140px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-71 {
+  top: 140px;
+}
+.trigger-71:hover ~ .plane {
+  height: 142px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-72 {
+  top: 142px;
+}
+.trigger-72:hover ~ .plane {
+  height: 144px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-73 {
+  top: 144px;
+}
+.trigger-73:hover ~ .plane {
+  height: 146px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-74 {
+  top: 146px;
+}
+.trigger-74:hover ~ .plane {
+  height: 148px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-75 {
+  top: 148px;
+}
+.trigger-75:hover ~ .plane {
+  height: 150px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-76 {
+  top: 150px;
+}
+.trigger-76:hover ~ .plane {
+  height: 152px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-77 {
+  top: 152px;
+}
+.trigger-77:hover ~ .plane {
+  height: 154px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-78 {
+  top: 154px;
+}
+.trigger-78:hover ~ .plane {
+  height: 156px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-79 {
+  top: 156px;
+}
+.trigger-79:hover ~ .plane {
+  height: 158px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-80 {
+  top: 158px;
+}
+.trigger-80:hover ~ .plane {
+  height: 160px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-81 {
+  top: 160px;
+}
+.trigger-81:hover ~ .plane {
+  height: 162px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-82 {
+  top: 162px;
+}
+.trigger-82:hover ~ .plane {
+  height: 164px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-83 {
+  top: 164px;
+}
+.trigger-83:hover ~ .plane {
+  height: 166px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-84 {
+  top: 166px;
+}
+.trigger-84:hover ~ .plane {
+  height: 168px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-85 {
+  top: 168px;
+}
+.trigger-85:hover ~ .plane {
+  height: 170px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-86 {
+  top: 170px;
+}
+.trigger-86:hover ~ .plane {
+  height: 172px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-87 {
+  top: 172px;
+}
+.trigger-87:hover ~ .plane {
+  height: 174px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-88 {
+  top: 174px;
+}
+.trigger-88:hover ~ .plane {
+  height: 176px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-89 {
+  top: 176px;
+}
+.trigger-89:hover ~ .plane {
+  height: 178px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-90 {
+  top: 178px;
+}
+.trigger-90:hover ~ .plane {
+  height: 180px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-91 {
+  top: 180px;
+}
+.trigger-91:hover ~ .plane {
+  height: 182px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-92 {
+  top: 182px;
+}
+.trigger-92:hover ~ .plane {
+  height: 184px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-93 {
+  top: 184px;
+}
+.trigger-93:hover ~ .plane {
+  height: 186px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-94 {
+  top: 186px;
+}
+.trigger-94:hover ~ .plane {
+  height: 188px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-95 {
+  top: 188px;
+}
+.trigger-95:hover ~ .plane {
+  height: 190px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-96 {
+  top: 190px;
+}
+.trigger-96:hover ~ .plane {
+  height: 192px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-97 {
+  top: 192px;
+}
+.trigger-97:hover ~ .plane {
+  height: 194px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-98 {
+  top: 194px;
+}
+.trigger-98:hover ~ .plane {
+  height: 196px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-99 {
+  top: 196px;
+}
+.trigger-99:hover ~ .plane {
+  height: 198px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-100 {
+  top: 198px;
+}
+.trigger-100:hover ~ .plane {
+  height: 200px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-101 {
+  top: 200px;
+}
+.trigger-101:hover ~ .plane {
+  height: 202px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-102 {
+  top: 202px;
+}
+.trigger-102:hover ~ .plane {
+  height: 204px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-103 {
+  top: 204px;
+}
+.trigger-103:hover ~ .plane {
+  height: 206px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-104 {
+  top: 206px;
+}
+.trigger-104:hover ~ .plane {
+  height: 208px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-105 {
+  top: 208px;
+}
+.trigger-105:hover ~ .plane {
+  height: 210px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-106 {
+  top: 210px;
+}
+.trigger-106:hover ~ .plane {
+  height: 212px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-107 {
+  top: 212px;
+}
+.trigger-107:hover ~ .plane {
+  height: 214px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-108 {
+  top: 214px;
+}
+.trigger-108:hover ~ .plane {
+  height: 216px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-109 {
+  top: 216px;
+}
+.trigger-109:hover ~ .plane {
+  height: 218px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-110 {
+  top: 218px;
+}
+.trigger-110:hover ~ .plane {
+  height: 220px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-111 {
+  top: 220px;
+}
+.trigger-111:hover ~ .plane {
+  height: 222px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-112 {
+  top: 222px;
+}
+.trigger-112:hover ~ .plane {
+  height: 224px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-113 {
+  top: 224px;
+}
+.trigger-113:hover ~ .plane {
+  height: 226px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-114 {
+  top: 226px;
+}
+.trigger-114:hover ~ .plane {
+  height: 228px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-115 {
+  top: 228px;
+}
+.trigger-115:hover ~ .plane {
+  height: 230px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-116 {
+  top: 230px;
+}
+.trigger-116:hover ~ .plane {
+  height: 232px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-117 {
+  top: 232px;
+}
+.trigger-117:hover ~ .plane {
+  height: 234px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-118 {
+  top: 234px;
+}
+.trigger-118:hover ~ .plane {
+  height: 236px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-119 {
+  top: 236px;
+}
+.trigger-119:hover ~ .plane {
+  height: 238px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-120 {
+  top: 238px;
+}
+.trigger-120:hover ~ .plane {
+  height: 240px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-121 {
+  top: 240px;
+}
+.trigger-121:hover ~ .plane {
+  height: 242px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-122 {
+  top: 242px;
+}
+.trigger-122:hover ~ .plane {
+  height: 244px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-123 {
+  top: 244px;
+}
+.trigger-123:hover ~ .plane {
+  height: 246px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-124 {
+  top: 246px;
+}
+.trigger-124:hover ~ .plane {
+  height: 248px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-125 {
+  top: 248px;
+}
+.trigger-125:hover ~ .plane {
+  height: 250px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-126 {
+  top: 250px;
+}
+.trigger-126:hover ~ .plane {
+  height: 252px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-127 {
+  top: 252px;
+}
+.trigger-127:hover ~ .plane {
+  height: 254px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-128 {
+  top: 254px;
+}
+.trigger-128:hover ~ .plane {
+  height: 256px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-129 {
+  top: 256px;
+}
+.trigger-129:hover ~ .plane {
+  height: 258px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-130 {
+  top: 258px;
+}
+.trigger-130:hover ~ .plane {
+  height: 260px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-131 {
+  top: 260px;
+}
+.trigger-131:hover ~ .plane {
+  height: 262px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-132 {
+  top: 262px;
+}
+.trigger-132:hover ~ .plane {
+  height: 264px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-133 {
+  top: 264px;
+}
+.trigger-133:hover ~ .plane {
+  height: 266px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-134 {
+  top: 266px;
+}
+.trigger-134:hover ~ .plane {
+  height: 268px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-135 {
+  top: 268px;
+}
+.trigger-135:hover ~ .plane {
+  height: 270px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-136 {
+  top: 270px;
+}
+.trigger-136:hover ~ .plane {
+  height: 272px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-137 {
+  top: 272px;
+}
+.trigger-137:hover ~ .plane {
+  height: 274px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-138 {
+  top: 274px;
+}
+.trigger-138:hover ~ .plane {
+  height: 276px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-139 {
+  top: 276px;
+}
+.trigger-139:hover ~ .plane {
+  height: 278px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-140 {
+  top: 278px;
+}
+.trigger-140:hover ~ .plane {
+  height: 280px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-141 {
+  top: 280px;
+}
+.trigger-141:hover ~ .plane {
+  height: 282px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-142 {
+  top: 282px;
+}
+.trigger-142:hover ~ .plane {
+  height: 284px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-143 {
+  top: 284px;
+}
+.trigger-143:hover ~ .plane {
+  height: 286px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-144 {
+  top: 286px;
+}
+.trigger-144:hover ~ .plane {
+  height: 288px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-145 {
+  top: 288px;
+}
+.trigger-145:hover ~ .plane {
+  height: 290px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-146 {
+  top: 290px;
+}
+.trigger-146:hover ~ .plane {
+  height: 292px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-147 {
+  top: 292px;
+}
+.trigger-147:hover ~ .plane {
+  height: 294px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-148 {
+  top: 294px;
+}
+.trigger-148:hover ~ .plane {
+  height: 296px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-149 {
+  top: 296px;
+}
+.trigger-149:hover ~ .plane {
+  height: 298px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-150 {
+  top: 298px;
+}
+.trigger-150:hover ~ .plane {
+  height: 300px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-151 {
+  top: 300px;
+}
+.trigger-151:hover ~ .plane {
+  height: 302px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-152 {
+  top: 302px;
+}
+.trigger-152:hover ~ .plane {
+  height: 304px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-153 {
+  top: 304px;
+}
+.trigger-153:hover ~ .plane {
+  height: 306px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-154 {
+  top: 306px;
+}
+.trigger-154:hover ~ .plane {
+  height: 308px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-155 {
+  top: 308px;
+}
+.trigger-155:hover ~ .plane {
+  height: 310px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-156 {
+  top: 310px;
+}
+.trigger-156:hover ~ .plane {
+  height: 312px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-157 {
+  top: 312px;
+}
+.trigger-157:hover ~ .plane {
+  height: 314px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-158 {
+  top: 314px;
+}
+.trigger-158:hover ~ .plane {
+  height: 316px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-159 {
+  top: 316px;
+}
+.trigger-159:hover ~ .plane {
+  height: 318px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-160 {
+  top: 318px;
+}
+.trigger-160:hover ~ .plane {
+  height: 320px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-161 {
+  top: 320px;
+}
+.trigger-161:hover ~ .plane {
+  height: 322px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-162 {
+  top: 322px;
+}
+.trigger-162:hover ~ .plane {
+  height: 324px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-163 {
+  top: 324px;
+}
+.trigger-163:hover ~ .plane {
+  height: 326px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-164 {
+  top: 326px;
+}
+.trigger-164:hover ~ .plane {
+  height: 328px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-165 {
+  top: 328px;
+}
+.trigger-165:hover ~ .plane {
+  height: 330px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-166 {
+  top: 330px;
+}
+.trigger-166:hover ~ .plane {
+  height: 332px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-167 {
+  top: 332px;
+}
+.trigger-167:hover ~ .plane {
+  height: 334px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-168 {
+  top: 334px;
+}
+.trigger-168:hover ~ .plane {
+  height: 336px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-169 {
+  top: 336px;
+}
+.trigger-169:hover ~ .plane {
+  height: 338px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-170 {
+  top: 338px;
+}
+.trigger-170:hover ~ .plane {
+  height: 340px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-171 {
+  top: 340px;
+}
+.trigger-171:hover ~ .plane {
+  height: 342px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-172 {
+  top: 342px;
+}
+.trigger-172:hover ~ .plane {
+  height: 344px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-173 {
+  top: 344px;
+}
+.trigger-173:hover ~ .plane {
+  height: 346px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-174 {
+  top: 346px;
+}
+.trigger-174:hover ~ .plane {
+  height: 348px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-175 {
+  top: 348px;
+}
+.trigger-175:hover ~ .plane {
+  height: 350px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-176 {
+  top: 350px;
+}
+.trigger-176:hover ~ .plane {
+  height: 352px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-177 {
+  top: 352px;
+}
+.trigger-177:hover ~ .plane {
+  height: 354px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-178 {
+  top: 354px;
+}
+.trigger-178:hover ~ .plane {
+  height: 356px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-179 {
+  top: 356px;
+}
+.trigger-179:hover ~ .plane {
+  height: 358px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-180 {
+  top: 358px;
+}
+.trigger-180:hover ~ .plane {
+  height: 360px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-181 {
+  top: 360px;
+}
+.trigger-181:hover ~ .plane {
+  height: 362px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-182 {
+  top: 362px;
+}
+.trigger-182:hover ~ .plane {
+  height: 364px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-183 {
+  top: 364px;
+}
+.trigger-183:hover ~ .plane {
+  height: 366px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-184 {
+  top: 366px;
+}
+.trigger-184:hover ~ .plane {
+  height: 368px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-185 {
+  top: 368px;
+}
+.trigger-185:hover ~ .plane {
+  height: 370px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-186 {
+  top: 370px;
+}
+.trigger-186:hover ~ .plane {
+  height: 372px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-187 {
+  top: 372px;
+}
+.trigger-187:hover ~ .plane {
+  height: 374px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-188 {
+  top: 374px;
+}
+.trigger-188:hover ~ .plane {
+  height: 376px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-189 {
+  top: 376px;
+}
+.trigger-189:hover ~ .plane {
+  height: 378px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-190 {
+  top: 378px;
+}
+.trigger-190:hover ~ .plane {
+  height: 380px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-191 {
+  top: 380px;
+}
+.trigger-191:hover ~ .plane {
+  height: 382px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-192 {
+  top: 382px;
+}
+.trigger-192:hover ~ .plane {
+  height: 384px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-193 {
+  top: 384px;
+}
+.trigger-193:hover ~ .plane {
+  height: 386px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-194 {
+  top: 386px;
+}
+.trigger-194:hover ~ .plane {
+  height: 388px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-195 {
+  top: 388px;
+}
+.trigger-195:hover ~ .plane {
+  height: 390px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-196 {
+  top: 390px;
+}
+.trigger-196:hover ~ .plane {
+  height: 392px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-197 {
+  top: 392px;
+}
+.trigger-197:hover ~ .plane {
+  height: 394px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-198 {
+  top: 394px;
+}
+.trigger-198:hover ~ .plane {
+  height: 396px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-199 {
+  top: 396px;
+}
+.trigger-199:hover ~ .plane {
+  height: 398px;
+  -webkit-transition: initial;
+  transition: initial;
+}
+
+.trigger-200 {
+  top: 398px;
+}
+.trigger-200:hover ~ .plane {
+  height: 400px;
+  -webkit-transition: initial;
+  transition: initial;
+}

@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #FDA231;
+  background: -webkit-linear-gradient(bottom left, #FDA231 0%, #FDCA31 100%);
+  background: linear-gradient(to top right, #FDA231 0%, #FDCA31 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FDA231', endColorstr='#FDCA31',GradientType=1 );
+  color: #497081;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.list {
+  position: absolute;
+  width: 240px;
+  height: 280px;
+  top: 60px;
+  left: 80px;
+  background: #FFFFFF;
+  box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.list .head {
+  padding: 20px 0;
+  margin: 0 30px;
+  border-bottom: 1px solid #D4DCE0;
+}
+.list .title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.list .subtitle {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+.list ul {
+  list-style: none;
+  padding: 4px 0;
+  margin: 0 30px;
+}
+.list ul li {
+  position: relative;
+  display: block;
+  margin: 24px 0;
+  height: 14px;
+}
+.list ul .text {
+  float: left;
+  font-size: 13px;
+  line-height: 14px;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.list ul .button {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  float: right;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #497081;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all .4s ease-out .5s;
+  transition: all .4s ease-out .5s;
+}
+.list ul .checkmark {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  stroke: #C8D4D9;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-dasharray: 30 30;
+  stroke-dashoffset: 30;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+.list ul input {
+  display: none;
+}
+.list ul input:checked ~ .text {
+  color: #C8D4D9;
+}
+.list ul input:checked ~ .button {
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 0;
+}
+.list ul input:checked ~ .checkmark {
+  stroke-dashoffset: 0;
+  -webkit-transition: all .5s ease-out .4s;
+  transition: all .5s ease-out .4s;
+}

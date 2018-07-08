@@ -1,0 +1,18 @@
+.frame
+	input type="checkbox" id="button" name="state"
+	label class="icon" for="button"
+		.pause
+		.play
+	.counter
+		div class="thousands number"
+			-for i in (0..9)
+				span class="number-#{i}" #{i}
+		div class="hundreds number"
+			-for i in (0..9)
+				span class="number-#{i}" #{i}
+		div class="tens number"
+			-for i in (0..9)
+				span class="number-#{i}" #{i}
+		div class="units number"
+			-for i in (0..9)
+				span class="number-#{i}" #{i}

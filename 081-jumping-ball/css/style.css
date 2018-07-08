@@ -1,0 +1,174 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  background: #9B59B6;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.floor {
+  position: absolute;
+  width: 400px;
+  height: 130px;
+  left: 0;
+  bottom: 0;
+  background: #49627C;
+}
+
+.ballMove {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 230px;
+  left: 400px;
+  -webkit-animation: move 3s ease-out infinite;
+          animation: move 3s ease-out infinite;
+}
+.ballMove .ballUp {
+  -webkit-animation: up 3s cubic-bezier(0, 0, 0.38, 1) infinite;
+          animation: up 3s cubic-bezier(0, 0, 0.38, 1) infinite;
+}
+.ballMove .ballDown {
+  -webkit-animation: down 3s cubic-bezier(0.38, 0, 1, 1) infinite;
+          animation: down 3s cubic-bezier(0.38, 0, 1, 1) infinite;
+}
+.ballMove .ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: ball 3s cubic-bezier(0.38, 0, 1, 1) infinite;
+          animation: ball 3s cubic-bezier(0.38, 0, 1, 1) infinite;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-460px);
+            transform: translateX(-460px);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-460px);
+            transform: translateX(-460px);
+  }
+}
+@-webkit-keyframes up {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  35%, 50% {
+    -webkit-transform: translateY(-105px);
+            transform: translateY(-105px);
+  }
+  65%, 80% {
+    -webkit-transform: translateY(-168px);
+            transform: translateY(-168px);
+  }
+  90%, 100% {
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+  }
+}
+@keyframes up {
+  0%, 20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  35%, 50% {
+    -webkit-transform: translateY(-105px);
+            transform: translateY(-105px);
+  }
+  65%, 80% {
+    -webkit-transform: translateY(-168px);
+            transform: translateY(-168px);
+  }
+  90%, 100% {
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  20%, 35% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50%, 65% {
+    -webkit-transform: translateY(105px);
+            transform: translateY(105px);
+  }
+  80%, 95% {
+    -webkit-transform: translateY(168px);
+            transform: translateY(168px);
+  }
+  100% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+}
+@keyframes down {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  20%, 35% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50%, 65% {
+    -webkit-transform: translateY(105px);
+            transform: translateY(105px);
+  }
+  80%, 95% {
+    -webkit-transform: translateY(168px);
+            transform: translateY(168px);
+  }
+  100% {
+    -webkit-transform: translateY(190px);
+            transform: translateY(190px);
+  }
+}
+@-webkit-keyframes ball {
+  0%, 19%,25%, 49%,55%, 79%,85%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20%, 80%, 50%, 80% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+}
+@keyframes ball {
+  0%, 19%,25%, 49%,55%, 79%,85%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20%, 80%, 50%, 80% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+}

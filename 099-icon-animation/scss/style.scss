@@ -1,0 +1,130 @@
+$color1: #333;
+$color2: #2ecc71;
+$duration: .6s;
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.2);
+	overflow: hidden;
+	background: #27ae60;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#cb {
+	display: none;
+}
+
+#cb:checked {
+	
+	& ~ .bg {
+		transform: scale(1);	
+	}
+	
+	& ~ .ring,
+	& ~ .stripes,{
+		opacity: 0;
+		transform: scale(1);
+		transition: transform $duration ease-out, opacity ($duration / 2) ease-out ($duration / 2);
+	}
+	
+	& ~ .icon {
+		border-radius: 0;
+		transform: rotate(180deg) scale(1.1);
+		box-shadow: -4px -8px 16px rgba(0,0,0,0.2);
+	}
+	
+}
+
+.label {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+
+.bg {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	top: -100px;
+	left: -100px;
+	background: $color2;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: all $duration ease-in-out;
+}
+
+.icon {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 185px;
+	left: 185px;
+	background: #fff;
+	border-radius: 50%;
+	transition: all $duration ease-in-out;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+
+.ring {
+	box-sizing: border-box;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 125px;
+	left: 125px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform $duration ease-in, opacity ($duration / 2) ease-in;
+}
+
+.stripes {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	top: 50px;
+	left: 50px;
+	transform: scale(0);
+	transition: transform $duration ease-in, opacity ($duration / 2) ease-in;
+	
+	.stripe {
+		position: absolute;
+		height: 26px;
+		width: 4px;
+		background: #fff;
+		top: 137px;
+		left: 148px;
+		
+		@for $i from 1 through 18 {
+			$degree: $i * 20deg;
+			&-#{$i} {
+				transform: rotate($degree) translateY(-120px);
+			}
+		}
+		
+	}
+	
+}
+
+@keyframes background {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

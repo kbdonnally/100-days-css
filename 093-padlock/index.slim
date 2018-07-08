@@ -1,0 +1,12 @@
+.frame
+	.center
+		.lock onclick="void(0);"
+			.hanger
+				.inside
+			.base
+				.ring
+					-for i in (1..40)
+						div class="line line-#{i}"
+					-for i in (0..7)
+						div class="number number-#{i}" #{i * 5}
+				.knob

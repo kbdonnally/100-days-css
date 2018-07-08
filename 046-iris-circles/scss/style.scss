@@ -1,0 +1,76 @@
+$numberOfRings: 6; // update together with HTML
+$numberOfDots: 12; // update together with HTML
+$radius: 100;
+$dotsPerCircle: 12;
+$angle: 360 / $dotsPerCircle;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: #27ae60;
+  color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: perspective(60px);
+	transform-style: preserve-3d;
+	
+}
+
+.dot {
+  position: absolute;
+	width: 10px;
+	height: 10px;
+  top: ($radius) + px;
+  left: ($radius) + px;
+	background: #fff;
+	border-radius: 50px;
+}
+
+.ring {
+	position: absolute;
+	width: ($radius * 2) + px;
+	height: ($radius * 2) + px;
+	top: ( (400 - ($radius * 2) ) / 2 ) + px;
+	left: ( (400 - ($radius * 2) ) / 2 ) + px;
+}
+
+@for $i from 1 through $numberOfRings {
+	.ring-#{$i} {
+		$nullBase: $i - 1;
+		animation: inOut-#{$i} 6s ease-in-out alternate infinite;
+		
+		.dot {
+			opacity: (1 - ($nullBase / 10) );
+		}
+	}	
+}
+
+@for $i from 1 through $numberOfDots {
+	.dot-#{$i} {
+		$nullBase: $i - 1;
+		$deg: ($nullBase * $angle) + deg;
+		transform: translate3d(0, ($radius * -1) + px, 0) rotate($deg);
+		transform-origin: 0 ($radius) + px;
+	}
+}
+
+@for $i from 1 through $numberOfRings {
+	@keyframes inOut-#{$i} {
+		$nullBase: $i - 1;
+		0% {
+			transform: scale(1 - ($nullBase / 7)) rotate( ($nullBase*5) + deg );
+		}
+		100% {
+			transform: scale(1 - ($nullBase / 22)) rotate( ( ($nullBase*10) + 360) + deg);
+		}
+	}
+}
+

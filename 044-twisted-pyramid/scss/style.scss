@@ -1,0 +1,58 @@
+// Rerun if out of sync
+
+$numberOfRects: 20; // update together with HTML
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: #222;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	&:hover .rect {
+		animation-play-state: paused;	
+	}
+	
+}
+
+.rect {
+	box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #888;
+	background: #222;
+}
+
+@for $i from 1 through $numberOfRects {
+	.rect-#{$i} {
+		$size: 210 - ($i * 10); 
+		$offset: (400 - $size) / 2;
+		$color: 70 + ($i * 8);
+		z-index: $i;
+		width: $size + px;
+		height: $size + px;
+		top: $offset + px;
+		left: $offset + px;
+		border-color: rgb($color, $color, $color);
+		animation: rotate 2s ease-in-out ($i / 30) + s alternate infinite;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg) translate3d(0,0,0);
+	}
+	to {
+		transform: rotate(360deg) translate3d(0,0,0);
+	}
+}
+

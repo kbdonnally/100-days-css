@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 145px;
+}
+
+h1, h2 {
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.slices {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: url("http://100dayscss.com/codepen/slice-image-1.jpg") center center no-repeat;
+  background-size: 400px 400px;
+  cursor: pointer;
+}
+.slices:hover h1, .slices:hover h2 {
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+.slices:hover h2 {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+.slices:hover .slice {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.slices .slice {
+  position: relative;
+  z-index: 2;
+  float: left;
+  box-sizing: border-box;
+  width: 50px;
+  height: 400px;
+  background: url("http://100dayscss.com/codepen/slice-image-2.jpg") center center no-repeat;
+  background-size: 400px 400px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.slices .slice-1 {
+  background-position: 0px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-2 {
+  background-position: -50px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-3 {
+  background-position: -100px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-4 {
+  background-position: -150px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-5 {
+  background-position: -200px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-6 {
+  background-position: -250px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-7 {
+  background-position: -300px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-8 {
+  background-position: -350px 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  opacity: 0;
+}
+.slices .slice-2 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+.slices .slice-4 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+.slices .slice-6 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+.slices .slice-8 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}

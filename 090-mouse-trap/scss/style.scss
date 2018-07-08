@@ -1,0 +1,119 @@
+$rows: 19; // sync with html
+$columns: 20; // sync with html
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.25);
+	overflow: hidden;
+	background: #2980b9;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.space {
+	height: 10px;
+}
+
+.trigger {
+	position: relative;
+	z-index: 10;
+	box-sizing: border-box;
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+
+.lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	.line {
+		margin: 19px 0px;
+		height: 1px;
+		width: 400px;
+
+		.left, .right {
+			float: left;
+			height: 1px;
+			width: 200px;
+			background: #fff;
+			transform-origin: 0 50%;
+			transition: all .3s linear;
+			transform: scaleX(0);
+		}
+
+		.right {
+			transform-origin: 100% 50%;
+		}
+
+	}	
+
+}
+
+$row: 1;
+$column: 1;
+@for $i from 1 through ($rows * $columns) {
+
+	// update row
+	@if ($row * $columns) < $i {
+		$row: $row + 1;
+	}
+
+	// update column
+	$column: $i - ( ($row - 1) * $columns );
+
+	.trigger-#{$i}:hover {
+		
+		& ~ .lines .line-#{$row} {
+			$scale: ($column - 3) / 10;
+			.left {
+				transform: scaleX($scale);	
+			}
+			$scale: ($columns - ($column + 2 ) ) / 10;
+			.right {
+				transform: scaleX($scale);
+			}
+			
+		}
+		
+		& ~ .lines .line-#{$row - 1},
+		& ~ .lines .line-#{$row + 1}{
+			$scale: ($column - 2) / 10;
+			.left {
+				transform: scaleX($scale);	
+			}
+			$scale: ($columns - ($column + 1 ) ) / 10;
+			.right {
+				transform: scaleX($scale);
+			}
+			
+		}
+		
+		& ~ .lines .line-#{$row - 2},
+		& ~ .lines .line-#{$row + 2}{
+			$scale: ($column - 1) / 10;
+			.left {
+				transform: scaleX($scale);	
+			}
+			$scale: ($columns - $column ) / 10;
+			.right {
+				transform: scaleX($scale);
+			}
+			
+		}
+		
+	}
+
+}

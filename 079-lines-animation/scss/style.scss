@@ -1,0 +1,115 @@
+$numberOfLines: 10; // sync with HTML
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background: #607D8B;
+	color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.line {
+	box-sizing: border-box;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+@for $i from 1 through $numberOfLines {
+	$nullBase: $i - 1;
+	$degree: 360 / $numberOfLines;
+
+	.line-#{$i} {
+		animation: line-#{$i} 10s ease-in-out infinite;
+	}
+
+	@keyframes line-#{$i} {
+		0% {
+			transform: rotate(0) translate(0,0) scale(0.01);
+		}
+		5% {
+			transform: rotate(0) translate(0,0) scale(1);
+		}
+		15% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,0) scale(1);
+		}
+		20% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-100px) scale(.25,1);
+		}
+		25% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-100px) scale(.25,.25) rotate(179deg);
+		}
+		30% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-100px) scale(1,.25) rotate(179deg);
+		}
+		35% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-60px) scale(1,.1);
+		}
+		40% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-60px) scale(1,.1) translate(-30px, 0);
+		}
+		45% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-60px) scale(1,.1) translate(30px, 0);
+		}
+		50% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-60px) scale(.1,1);
+		}
+		55% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-60px) scale(.5,.1);
+			border-radius: 0;
+		}
+		60% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-80px) scale(.5,.5) rotate(179deg);
+			border-radius: 50%;
+		}
+		65% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,0) scale(.2,.2);
+			border-radius: 50%;
+		}
+		70% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-100px) scale(.25,1);
+			border-radius: 0;
+		}
+		75% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-100px) scale(.25,.25);
+		}
+		80% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-50px) scale(.5,.5);
+		}
+		85% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-50px) scale(.5,.5) rotate(179deg) translate(-50px,50px);
+		}
+		90% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-30px) scale(.5,.1);
+		}
+		95% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-10px) scale(.1,.5);
+		}
+		100% {
+			transform: rotate(($nullBase * $degree)+deg) translate(0,-300px) scale(.1,.5);
+		}
+	}
+
+}

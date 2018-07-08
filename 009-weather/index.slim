@@ -1,0 +1,26 @@
+.frame
+	.moon
+		- for i in (1..11)
+			div class="crater-#{ i }"
+	.hill-bg-1
+	.hill-bg-2
+	.hill-fg-1
+	.hill-fg-2
+	.hill-fg-3
+	.front
+		.temperature 12°
+		.info Wind: E 7 km/h <br/> Humidity: 87%
+		table.preview 
+			tr
+				td Tue
+				td 21° / 9°
+			tr
+				td Wed
+				td 23° / 10°
+	
+	- for i in (1..10)
+		div class="drop-big-#{ i }"
+	- for i in (1..10)
+		div class="drop-medium-#{ i }"
+	- for i in (1..10)
+		div class="drop-small-#{ i }"
